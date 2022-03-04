@@ -47,14 +47,15 @@
         previousText: 'PREVIOUS',
         nextText: 'NEXT',
         crossChapter: true
-      },
-      plugins: [
-        function (hook, vm) {
-          hook.doneEach(function() {
-            var label, domObj, main, divEle, gitalk;
-            label = md5(decodeURI(vm.route.path.split("/").pop()));
-            domObj = Docsify.dom;
-            main = domObj.getNode("#main");
+      }
+      // ,
+      // plugins: [
+      //   function (hook, vm) {
+      //     hook.doneEach(function() {
+            // var label, domObj, main, divEle, gitalk;
+            // label = md5(decodeURI(vm.route.path.split("/").pop()));
+            // domObj = Docsify.dom;
+            // main = domObj.getNode("#main");
 
             // Array.apply(
             //   null,
@@ -72,9 +73,9 @@
             //   Object.assign(gitalkConfig, { id: !label ? "home" : label })
             // );
             // gitalk.render("gitalk-container-" + label);
-          });
-        }
-      ]
+          // });
+        // }
+      // ]
     }                                 
   </script>
 
