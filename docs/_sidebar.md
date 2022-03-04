@@ -3,7 +3,6 @@
     - Java
 
         - [linux-JDK安装](/md/idea-plugin/2022-03-04-linux安装JDK.md)
-        - [第2节：IDEA 插件怎么发布](/md/idea-plugin/2021-08-29-技术实践IDEA插件怎么发布.md)
 
     - Netty
 
