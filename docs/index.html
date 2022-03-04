@@ -22,12 +22,6 @@
 <div id="app"></div>
 <script>
     var gitalkConfig = {
-      clientID: '4a657aa4ae6c0f1862a1',
-      clientSecret: '94793d5bac0c884a8798ea941f7c5bc9fb004720',
-      repo: 'ZhangGangHua.github.io',
-      owner: '张港华',
-      admin: ["张港华"],
-      distractionFreeMode: false
     };
     window.$docsify = {
       name: '张港华',
@@ -51,7 +45,27 @@
       plugins: [
         function (hook, vm) {
           hook.doneEach(function() {
+            var label, domObj, main, divEle, gitalk;
+            label = md5(decodeURI(vm.route.path.split("/").pop()));
+            domObj = Docsify.dom;
+            main = domObj.getNode("#main");
 
+            Array.apply(
+              null,
+              document.querySelectorAll("div.gitalk-container")
+            ).forEach(function(ele) {
+              ele.remove();
+            });
+
+            divEle = domObj.create("div");
+            divEle.id = "gitalk-container-" + label;
+            divEle.className = "gitalk-container";
+            divEle.style = "width: " + main.clientWidth + "px; margin: 0 auto 20px;";
+            domObj.appendTo(domObj.find(".content"), divEle);
+            gitalk = new Gitalk(
+              Object.assign(gitalkConfig, { id: !label ? "home" : label })
+            );
+            gitalk.render("gitalk-container-" + label);
           });
         }
       ]

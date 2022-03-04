@@ -5,7 +5,7 @@
     - BIO
     - NIO
     - Netty
-       - [Netty简介](/md/idea-plugin/2022-03-04-Netty简介.md)
+        - [Netty简介](/md/idea-plugin/2022-03-04-Netty简介.md)
 
 - :memo: maven
     - 环境安装
