@@ -1,15 +1,15 @@
 - [:octocat: 首页](/README)
-- :memo: Java
+- :memo: 目录
+    - Java
 
-    - 环境安装
         - [linux-JDK安装](/md/idea-plugin/2022-03-04-linux安装JDK.md)
-    - BIO
-    - NIO
-    - Netty
-    
-       - [Netty简介](/md/idea-plugin/2022-03-04-Netty简介.md)
+        - [第2节：IDEA 插件怎么发布](/md/idea-plugin/2021-08-29-技术实践IDEA插件怎么发布.md)
 
-- :memo: maven
-    - 环境安装
+    - Netty
+
+        - [Netty简介](/md/idea-plugin/2022-03-04-Netty简介.md)
+
+    - maven
+
         - [linux-maven安装](/md/idea-plugin/2022-03-04-linux安装maven.md)
-    
+        
